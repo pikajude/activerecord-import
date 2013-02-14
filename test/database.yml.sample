@@ -1,6 +1,6 @@
 common: &common
   username: root
-  password: 
+  password:
   encoding: utf8
   host:     localhost
   database: activerecord_import_test
@@ -14,10 +14,10 @@ mysql2:
   adapter: mysql2
 
 mysqlspatial:
-  <<: *mysql
+  adapter: mysql
 
 mysqlspatial2:
-  <<: *mysql2
+  adapter: mysql2
 
 seamless_database_pool:
   <<: *common
@@ -33,7 +33,9 @@ postgresql:
   min_messages: warning
 
 postgis:
-  <<: *postgresql
+  username: postgres
+  adapter: postgresql
+  min_messages: warning
 
 oracle:
   <<: *common
@@ -49,4 +51,5 @@ sqlite3:
   database: test.db
 
 spatialite:
-  <<: *sqlite3
+  adapter: sqlite3
+  database: test.db
