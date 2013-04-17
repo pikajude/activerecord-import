@@ -1,4 +1,4 @@
-require "activerecord-import/adapters/abstract_adapter"
+require "activerecord-import-rails4/adapters/abstract_adapter"
 
 module ActiveRecord # :nodoc:
   module ConnectionAdapters # :nodoc:

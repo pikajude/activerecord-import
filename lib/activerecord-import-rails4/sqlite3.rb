@@ -4,5 +4,5 @@ warn <<-MSG
   http://github.com/zdennis/activerecord-import/wiki/Requiring for more information
 MSG
 
-require File.expand_path(File.join(File.dirname(__FILE__),  "/../activerecord-import"))
+require File.expand_path(File.join(File.dirname(__FILE__),  "/../activerecord-import-rails4"))
 
