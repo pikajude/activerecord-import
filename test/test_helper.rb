@@ -26,7 +26,7 @@ ActiveRecord::Base.logger = Logger.new("log/test.log")
 ActiveRecord::Base.logger.level = Logger::DEBUG
 ActiveRecord::Base.configurations["test"] = YAML.load_file(test_dir.join("database.yml"))[adapter]
 
-require "activerecord-import"
+require "activerecord-import-rails4"
 ActiveRecord::Base.establish_connection "test"
 
 ActiveSupport::Notifications.subscribe(/active_record.sql/) do |event, _, _, _, hsh|
